@@ -1,3 +1,52 @@
 #page-header h1 {
   color: red;
 }
+
+.container {
+  float: left;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  margin: 60px;
+  position: relative;
+  flex: 25%;
+  max-width: 40%;
+  padding: 0 4px;
+}
+
+
+.overlay .container {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 805px;
+  height: 0;
+  transition: .5s ease;
+}
+
+.container:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.text {
+  white-space: nowrap;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
